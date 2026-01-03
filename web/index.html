@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WASM Ray Tracer</title>
+
+    <script src="main.js" defer></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            color: #eee;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+        }
+
+        #canvas {
+            display: block;
+            margin: auto auto;
+            width: 80vw;
+            image-rendering: pixelated;
+        }
+
+        #ui {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 10;
+        }
+
+        #fps {
+            display: block;
+            width: 100%;
+            text-align: right;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="ui">
+        <div>
+            <input id="width-input" type="number" placeholder="Width" />
+            <input id="height-input" type="number" placeholder="Height" />
+            <button id="render-button">Reload</button>
+        </div>
+        <span id="fps">FPS: n/a</span>
+    </div>
+    <canvas id="canvas"></canvas>
+</body>
+</html>
